@@ -22,13 +22,13 @@
 
 ## ls Without Any Arguments
 ![Image](Lab1Images/lsNoArg.PNG)
-* The working directory when the code was run was home/lecture1.
+* The working directory when the code was run was /home/lecture1.
 * The output was a list of files and folders: Hello.class, Hello.java, messages, and README. This specific output was received because those files and folders were in the lecture1 folder, and the ls command's intended purposed when used without any arguments is used to view contents inside the current directory.
 * This is not an error. 
 
 ## ls With a Directory as an Argument
 ![Image](Lab1Images/lsDirArg.PNG)
-* The working directory when the code was run was home/lecture1.
+* The working directory when the code was run was /home/lecture1.
 * The output was a list of files and folders: en-us.txt, es-mx.txt, fr.txt, zh-cn.txt. This specific output was received because those files and folders were in the messages folder, and the ls command's intended purpose when passed with a directory as an argument displays the contents of the directory passed as an argument.
 * This is not an error.
 
