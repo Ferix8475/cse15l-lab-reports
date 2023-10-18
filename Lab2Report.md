@@ -1,7 +1,7 @@
-# Lab 1 Report
+# Lab 2 Report
 **Felix Xie**
 
 **AO3 CSE 15L**
 ## StringServer.java and Webpage
 The following is a image of the StringServer.java file
-![Image] cse15l-lab-reports/Lab2Information/StringServer.png
+![Image](/Lab2Information/StringServer.png)
