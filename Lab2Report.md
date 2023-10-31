@@ -38,12 +38,14 @@ is printed as a result of calling this request.
 ### This is the path to the private key for my SSH key
 
 ![Image](/Lab2Information/privateKey.PNG)
-The directory is /home/linus/ieng6/cs15lfa23/cs15lfa23fi/.ssh/authorized_keys
+
+The path to the private key is /home/linus/ieng6/cs15lfa23/cs15lfa23fi/.ssh/authorized_keys
 
 ### This is the path to the public key for my SSH key
 
 ![Image](/Lab2Information/publicKey.PNG)
-The directory is C:\Users\felix\.ssh\id_rsa
+
+The path to the public key is C:\Users\felix\.ssh\id_rsa
 
 ### This is the terminal output of logging into the ieng6 account remotely without a password
 
