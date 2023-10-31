@@ -53,11 +53,13 @@ The bug in the code was that arr and newArray were flipped in the for-loop as we
 ## Part 2 - find command
 **This section is sourced from ChatGPT. The prompt given was initially "find command line options", but it listed out many different options for various different commands. The prompt was then specified to be asking options for only the find command, of which a list of options was given.**
 
-# -name
+### -name
 ```
 felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main) $ find technical -name pmed.0020268.txt
 technical/plos/pmed.0020268.txt
 ```
+This command is searching for files with the specific name "pmed.0020268" in the technical directory, and outputting/printing anything that is found. This is useful for searching for a specific file in mind, and checking whether it exists or not. 
+
 
 ```
 felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main) $ find technical -name pmed.*.txt
@@ -76,7 +78,9 @@ technical/plos/pmed.0010023.txt
 technical/plos/pmed.0020258.txt
 technical/plos/pmed.0020268.txt
 ```
-# -type
+This command is searching in the technical directory for files with the specific name "pmed.", followed by any series of characters, and ended with ".txt". The "*" is used to create patterns, and essentially means "anything". Thus, anything that starts with pmed. and ends with .txt is searched for. Anything found is then outputted/printed. This is useful for searching for files with similar name structures or if searching for a specific file type (.pdf, .txt, etc.). 
+
+### -type
 ```
 felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main) $ find technical -type d
 technical
@@ -91,6 +95,7 @@ technical/government/Media
 technical/government/Post_Rate_Comm
 technical/plos
 ```
+The command is searching in the technical directory for directories that are in the technical directory, and it outputs/prints anything that is found. "-type d" specifies the type of structure to be searched for, and in this case, the "d" stands for directories, meaning that the search is for specifically directories only. This is useful for differentiating the types of files when searching, as sometimes searching for only regular files or searching for only directories is required. 
 
 ```
 felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main) $ find technical -type f
@@ -111,7 +116,10 @@ technical/plos/pmed.0020257.txt
 technical/plos/pmed.0020258.txt
 technical/plos/pmed.0020268.txt
 ```
-# -size
+The command is searching in the technical directory for regular files that are in the technical directory, and it outputs/prints anything that is found. "-type f" specifies the type of structure to be searched for, and in this case, the "f" stands for regular files, meaning that the search is for specifically files only. This is useful for differentiating the types of files when searching, as sometimes searching for only regular files or searching for only directories is required. 
+
+
+### -size
 ```
 felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main) $ find technical -type f -size -3k
 technical/government/Media/Campaign_Pays.txt
@@ -130,6 +138,8 @@ technical/plos/pmed.0020191.txt
 technical/plos/pmed.0020192.txt
 technical/plos/pmed.0020226.txt
 ```
+This command searches for files in the technical directory that have a size less than 3 kilobytes, and outputs/prints the files found. The "-" specifies that the search is for files less than 3 kilobytes, and the 3k specifies the size (3 kilobytes) that serves as the threshold of searching. This command can take other value arguments arguments can be passed with different sizes, which can be useful for searching for particularly small files (or directories, if changing the -type argument) under a certain threshold.  
+
 
 ```
 felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main) $ find technical -type f -size +100k
@@ -163,7 +173,11 @@ technical/government/Gen_Account_Office/pe1019.txt
 technical/government/Gen_Account_Office/Sept27-2002_d02966.txt
 technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt
 ```
-# -delete
+This command searches for files in the technical directory that have a size greater than 100 kilobytes, and outputs/prints the files found. The "+" specifies that the search is for files larger than 100 kilobytes, and the 100k specifies size (100 kilobytes) that serves as the threshold of searching. This command can take other value arguments arguments can be passed with different sizes, which can be useful for searching for particularly large files (or directories, if changing the -type argument) over a certain threshold.  
+
+
+### -delete
+-delete example 1:
 ```
 felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main) $ find technical -name pmed.0020278.txt
 technical/plos/pmed.0020278.txt
@@ -173,6 +187,7 @@ felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main) $ find technical -nam
 felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main) $ find technical -name pmed.0020278.txt
 
 ```
+This command searches in the technical directory for and, if found, deletes the file specified under the -name argument. There is no output. In this case, if a file has the name pmed.0020278.txt, it will be deleted, which can be seen above as searching for the file after passing -delete shows that it does not exist anymore. This is useful if you want to delete a specific file but don't know if it exists, or where it's located. 
 
 
 ```
@@ -187,3 +202,5 @@ felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main) $ find technical -nam
 felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main) $ find technical -name pmed.002027*.txt -type f
 
 ```
+This command searches in the technical directory for and, if found, deletes the file specified under the -name argument. There is no output. In this case, if a file has "pmed." followed by any series of characters, and ends with ".txt", it will be deleted. This can be seen above as searching for the file(s) after passing -delete shows that it does not exist anymore. This is useful if you want to delete a bunch of files that have similar names, and you might not know where they are located/whether they exist in the first place. 
+
