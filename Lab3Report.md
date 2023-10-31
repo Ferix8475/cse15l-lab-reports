@@ -20,6 +20,7 @@ public void testReversed() {
 }
 ```
 The following are the results of the previous two inputs:
+
 Failure-inducing input:
 ![Image](/Lab3Info/FailRun.PNG)
 
@@ -48,3 +49,22 @@ static int[] reversed(int[] arr) {
 ```
 
 The bug in the code was that arr and newArray were flipped in the for-loop as well as in the return statement. In the buggy version, arr was being set to 0s, as it was being assigned newArray's values (which were all zeroes upon initialization). Thus, by flipping them, newArray's values were now being set to arr's values in reverse order, and the correct array was also returned. 
+
+## Part 2 - find command
+**This section is sourced from ChatGPT. The prompt given was initially "find command line options", but it listed out many different options for various different commands. The prompt was then specified to be asking options for only the find command, of which a list of options was given.**
+
+# -name
+# -type
+# -size
+# -delete
+"""
+felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main)
+$ find technical -name pmed.0020278.txt
+technical/plos/pmed.0020278.txt
+
+felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main)
+$ find technical -name pmed.0020278.txt -delete
+
+felix@DESKTOP-UK76AME MINGW64 ~/Downloads/docsearch (main)
+$ find technical -name pmed.0020278.txt 
+"""
