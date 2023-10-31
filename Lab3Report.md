@@ -19,7 +19,12 @@ public void testReversed() {
     assertArrayEquals(new int[]{}, ArrayExamples.reversed(input1));
 }
 ```
+The following are the results of the previous two inputs:
+Failure-inducing input:
+![Image](/Lab3Info/FailRun.PNG)
 
+Non-failure inducing input:
+![Image](/Lab3Info/GoodRun.PNG)
 
 The reversed() method originally:
 ```
