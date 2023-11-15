@@ -18,19 +18,35 @@ git<space>clone<space><ctrl-v><enter>
 ### Running the Initial Set of Tests
 Keys pressed:
 ```
-cd<space>l<tab><enter>
+bash<space>test.sh<enter>
+```
+
+### Editting ListExamples.java
+Keys pressed:
+```
+vim<space><shift>l<tab>.java<enter>
 ```
 Followed by:
 ```
-javac<space>.-cp<space>.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar<space>*.java<enter>
-```
-Followed by: 
-```
-java<space>-cp<space>.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar<space>org.junit.runner.<shift>j<shift>unit<shift>core<space><shift>l<tab><shift>tests.java<enter>
+:44lllllli<backspace>2<esc>:wq<enter>
 ```
 
-### Logging into ieng6 Remotely
+### Rerunning ListExamplesTests.java
 Keys pressed:
 ```
-ssh cs15lfa23fi@ieng6.ucsd.edu
+<up><up><enter>
+```
+
+### Committing and Pushing changes to GitHub
+Keys pressed:
+```
+git<space>add<space>-<shift>a<enter>
+```
+Followed by:
+```
+git<space>commit<space>-m<space>"done"
+```
+Followed by:
+```
+git<space>push
 ```
