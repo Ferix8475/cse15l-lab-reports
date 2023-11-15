@@ -2,7 +2,7 @@
 **Felix Xie**
 
 **AO3 CSE 15L**
-## Part 1 - Bugs
+## Part 1 - Tasks
 ### Logging into ieng6 Remotely
 ![Image](/Lab4Images/step4.PNG)
 
