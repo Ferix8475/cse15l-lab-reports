@@ -52,7 +52,7 @@ You're on the right track on both points! I would suggest you consider the looki
 
 Since you are created an array of a size one less than what is expected, what type of error is commonly associated with this occurence? Where would you find these types of errors? After you think of that, look through your code thoroughly.
 
-## Part 3 - Student's Follow-up and Changes
+## Part 4 - Student's Follow-up and Changes
 ### Date: November 31th, 2023 | Name: Bonga Bunga | Re: My code doesn't function properly
 Thank you! It seems to have done the trick! I searched up the difference between the two commands you suggested as well as looked through my loops, and changed `>` to `>>` in line 10 of `makeArrays.sh`. I also realized that there was probably an off-by-one error in one of my for-loops, and caught one in my `toString()` method in `SortArrayByParity.java`. After making those changes, my code seems to work perfectly now! Here's the output after running the same three commands before:
 ```
@@ -63,5 +63,8 @@ bash makeArrays.sh 2 5
 ![Image](Lab5Info/Fixed.PNG)
 
 The bug that I had was that when using `>` instead of `>>`, every time I generated a new unsorted/sorted array pair, I was overwriting the previous contents of the file with the new file, which meant that I was perpetually overwriting each array. Thus, there was only one array left after running the for loop in `makeArrays.sh`, which was the last array. By using `>>`, I now appended the new items to the end of the file, which meant that I kept adding onto the previous unsorted/sorted array pairs. 
+
 In my toString() method in `SortArrayByParity.java`, I was looping from `i = 0` to `i = arr.length - 1`, which meant that I was excluding the last element of `arr` when converting `arr` into a printable string, thus losing the last number in the array. By fixing the for loop condition to `i < arr.length`, I was now able to loop through and include all the elements in `arr` in the String representation of it. 
 
+## Part 5 - Reflection
+I learned about bash files and their uses in coding. Unlike other languages that I've learned up to this point, bash is a command interpreter that can be used to interact with the terminal, and thus has many applications. For example, in Lab 6, we used bash files to grade student submissions, and were able to check for correct directory and file structures, create text files with debugging/error information, and more. In this lab, I used a bash file to call a program multiple times and store the outputs into a text file, which can be used later to parse through all of the data. While I had seen bash files before, I did not know of their capabilities and use cases (I only really recalled seeing the .sh in other contexts). Since bash can interact with the terminal, it sets itself apart from scripting languages like Python. While bash can be somewhat tedious to program in, learning about it in CSE15L has given me a great starting point in using bash files, and I hope to continue learning about bash and it's capabilities in the future. 
