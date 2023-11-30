@@ -29,4 +29,4 @@ The following image shows the content of the `makeArrays.sh`:
 
 ![Image](Lab5Info/makeArrays.PNG)
 
-Intended purpose of `makeArrays.sh`: `makeArrays.sh` takes two arguments, the first being the number of arrays to be created, and the second is the size of the arrays to be created. The file will generate the specified number of arrays unsorted to sorted, and write them all out to outputFile.txt, as well as print the result into the terminal. 
+Intended purpose of `makeArrays.sh`: `makeArrays.sh` takes two arguments, the first being the number of arrays to be created, and the second is the size of the arrays to be created. The file will generate the specified number of arrays unsorted to sorted, and write them all out to outputFile.txt, as well as print the result into the terminal. For example, if the call was `bash makeArrays.sh 5 5`, then 5 arrays should be generated of length 5, and the unsorted and sorted version of each array should be added to the file `outputFile.txt` (one pair of unsorted to sorted per line), and these contents should be printed in the terminal as well. 
