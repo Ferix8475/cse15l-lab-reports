@@ -50,15 +50,18 @@ I can see that there is only 1 array being created when there should be more, an
 ### Date: November 30th, 2023 | Name: Mois T'Chiken | Re: My code doesn't function properly
 You're on the right track on both points! I would suggest you consider the looking up the difference between the two commands `>>` and `>` when writing to `outputFile.txt` in `makeArrays.sh`. Both are very similar and have a subtle difference, which may be the key to solving your problem with the total number of arrays being written to `outputFile.txt` and thus being printed out.
 
-Since you are created an array of a size one less than what is expected, there is most likely an off-by-one error in one of your loops when you handle generating/printing your array. I would go back and check each one of your loops thoroughly to make sure that there is no off-by-one error.
+Since you are created an array of a size one less than what is expected, what type of error is commonly associated with this occurence? Where would you find these types of errors? After you think of that, look through your code thoroughly.
 
 ## Part 3 - Student's Follow-up and Changes
 ### Date: November 31th, 2023 | Name: Bonga Bunga | Re: My code doesn't function properly
-Thank you! It seems to have done the trick! I searched up the difference between the two commands you suggested as well as looked through my loops, and changed `>` to `>>` in line 10 of `makeArrays.sh` and I also caught an off-by-one error in my `toString()` method in `SortArrayByParity.java`. After making those changes, my code seems to work perfectly now! Here's the output after running the same three commands before:
+Thank you! It seems to have done the trick! I searched up the difference between the two commands you suggested as well as looked through my loops, and changed `>` to `>>` in line 10 of `makeArrays.sh`. I also realized that there was probably an off-by-one error in one of my for-loops, and caught one in my `toString()` method in `SortArrayByParity.java`. After making those changes, my code seems to work perfectly now! Here's the output after running the same three commands before:
 ```
 bash makeArrays.sh 4 20
 bash makeArrays.sh 4 5
 bash makeArrays.sh 2 5
 ```
 ![Image](Lab5Info/Fixed.PNG)
+
+The bug that I had was that when using `>` instead of `>>`, every time I generated a new unsorted/sorted array pair, I was overwriting the previous contents of the file with the new file, which meant that I was perpetually overwriting each array. Thus, there was only one array left after running the for loop in `makeArrays.sh`, which was the last array. By using `>>`, I now appended the new items to the end of the file, which meant that I kept adding onto the previous unsorted/sorted array pairs. 
+In my toString() method in `SortArrayByParity.java`, I was looping from `i = 0` to `i = arr.length - 1`, which meant that I was excluding the last element of `arr` when converting `arr` into a printable string, thus losing the last number in the array. By fixing the for loop condition to `i < arr.length`, I was now able to loop through and include all the elements in `arr` in the String representation of it. 
 
